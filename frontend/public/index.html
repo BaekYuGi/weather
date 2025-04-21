@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="한국 날씨 정보 애플리케이션"
+    />
+    <title>한국 날씨 앱</title>
+    <!-- Kakao Maps API는 index.html에 직접 포함하지 않고 React 컴포넌트에서 동적으로 로드합니다 -->
+    <!-- 
+      카카오맵 API 키 발급 및 설정 방법:
+      
+      1. https://developers.kakao.com 접속 및 로그인
+      2. '내 애플리케이션' 메뉴에서 '애플리케이션 추가하기' 클릭
+      3. 앱 이름(예: 날씨앱), 사업자명 입력 후 저장
+      
+      4. 웹 플랫폼 설정:
+         - 왼쪽 메뉴에서 '플랫폼' 선택
+         - '웹' 플랫폼 등록
+         - 사이트 도메인에 http://localhost:3000 입력 (개발 환경)
+         - 추가로 실제 배포 도메인도 등록
+      
+      5. JavaScript 키 활성화:
+         - 왼쪽 메뉴에서 '앱 키' 선택
+         - 'JavaScript 키' 확인
+         - '활성화 여부'가 ON으로 되어 있는지 확인
+      
+      6. 카카오맵 API 서비스 활성화:
+         - 왼쪽 메뉴에서 '카카오 로그인' 선택 (먼저 활성화 필요)
+         - '활성화 설정' ON으로 변경, 필요 항목 입력
+         - 왼쪽 메뉴에서 '지도' 선택
+         - 상태가 '활성화'인지 확인
+      
+      7. .env 파일에 API 키 설정:
+         REACT_APP_KAKAO_MAP_API_KEY=발급받은_JavaScript_키
+    -->
+  </head>
+  <body>
+    <noscript>이 앱을 실행하려면 JavaScript가 필요합니다.</noscript>
+    <div id="root"></div>
+  </body>
+</html> 

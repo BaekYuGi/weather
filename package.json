@@ -1,0 +1,25 @@
+{
+  "name": "weather-clothing-recommendation",
+  "version": "1.0.0",
+  "description": "날씨 정보 기반 의류 추천 애플리케이션",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-all": "npm install && npm install --prefix frontend"
+  },
+  "dependencies": {
+    "@expo/webpack-config": "19.0.0",
+    "@react-navigation/bottom-tabs": "^6.5.11",
+    "axios": "^1.8.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "nodemon": "^3.0.1"
+  }
+}
