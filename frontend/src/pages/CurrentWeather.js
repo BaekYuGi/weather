@@ -7,6 +7,7 @@ import ForecastDisplay from '../components/weather/ForecastDisplay';
 import ClothingRecommendation from '../components/recommendation/ClothingRecommendation';
 import LoadingSpinner from '../components/ui/LoadingSpinner';
 import ErrorMessage from '../components/ui/ErrorMessage';
+import config from '../config';
 
 const PageContainer = styled.div`
   max-width: 1200px;
@@ -96,7 +97,7 @@ const CurrentWeather = () => {
       setError(null);
 
       try {
-        const response = await axios.get('/api/weather/current', {
+        const response = await axios.get(`${config.API_BASE_URL}/api/weather/current`, {
           params: {
             lat: location.latitude,
             lon: location.longitude
@@ -106,7 +107,7 @@ const CurrentWeather = () => {
         setWeatherData(response.data);
 
         // 옷 추천 데이터 가져오기
-        const recommendResponse = await axios.get('/api/recommendations/clothes/current', {
+        const recommendResponse = await axios.get(`${config.API_BASE_URL}/api/recommendations/clothes/current`, {
           params: {
             lat: location.latitude,
             lon: location.longitude
@@ -136,8 +137,8 @@ const CurrentWeather = () => {
       try {
         // API 엔드포인트 선택
         const endpoint = forecastType === 'nowcast' 
-          ? '/api/weather/forecast/now'
-          : '/api/weather/forecast/short';
+          ? `${config.API_BASE_URL}/api/weather/forecast/now`
+          : `${config.API_BASE_URL}/api/weather/forecast/short`;
         
         console.log(`Fetching forecast from ${endpoint} for type: ${forecastType}`);
         
