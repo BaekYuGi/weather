@@ -81,7 +81,7 @@ const Home = () => {
           현재 위치의 실시간 날씨 정보와 앞으로의 날씨 예보를 한 번에! 
           지금 바로 입기 좋은 옷과 앞으로의 날씨 변화를 미리 확인하고 계획하세요.
         </FeatureDescription>
-        <ActionButton to="/weather">날씨 확인 및 옷차림 추천 받기</ActionButton>
+        <ActionButton to="/current">날씨 확인 및 옷차림 추천 받기</ActionButton>
       </FeatureCard>
 
     </HomeContainer>

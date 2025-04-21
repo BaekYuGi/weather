@@ -14,7 +14,7 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/weather" element={<CurrentWeather />} />
+            <Route path="/current" element={<CurrentWeather />} />
           </Routes>
         </main>
         <Footer />
