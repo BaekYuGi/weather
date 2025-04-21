@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>날씨 정보 앱</title>
+  <script type="text/javascript">
+    // GitHub Pages에서 SPA 라우팅 처리를 위한 리다이렉션 스크립트
+    const pathSegmentsToKeep = 1; // /weather 경로는 유지
+    
+    let l = window.location;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+      l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/') +
+      (l.search ? '&' + l.search.slice(1) : '') +
+      l.hash
+    );
+  </script>
+</head>
+<body>
+</body>
+</html> 

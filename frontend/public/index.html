@@ -9,6 +9,20 @@
       content="한국 날씨 정보 애플리케이션"
     />
     <title>한국 날씨 앱</title>
+    <!-- GitHub Pages에서 SPA 라우팅 처리를 위한 리다이렉션 스크립트 -->
+    <script type="text/javascript">
+      // 현재 URL이 리다이렉션된 URL인지 확인
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
     <!-- Kakao Maps API는 index.html에 직접 포함하지 않고 React 컴포넌트에서 동적으로 로드합니다 -->
     <!-- 
       카카오맵 API 키 발급 및 설정 방법:
